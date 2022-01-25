@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>список публикации</h1>
+    {% for article in article_list %}
+    <h3>{{ article.title }}</h3>
+    <p>{{article.description }}</p>
+    <a> href="http://google.com">ссылка на ютуп канал</a>
+    <a href="{%url 'article-datel-url' article.id %} "></a>
+    <img src="https://www.ixbt.com/img/n1/news/2021/7/3/youtube-reklam-engelleme-mobil-youtube-uygulamasi-reklam-engelleme_large.jpg">
+    <br>
+    {% endfor %}
+</body>
+</html>
